@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데이터 요청하기</title>
+
+</head>
+<body>
+  
+
+  <script>
+    let xhr = new XMLHttpRequest()
+    // 요청 메소드 : GET
+    xhr.open("GET", "https://xn--pe5b27r.com/api/menu/random")
+    xhr.onreadystatechange = function() {
+      // 요청 완료
+      if( xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200 ) {
+        console.log( xhr.responseText );
+      }
+    }
+    // 데이터 요청 전송
+    xhr.send()
+  </script>
+</body>
+</html>

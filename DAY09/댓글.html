@@ -85,8 +85,53 @@
       </div>
     </div>
   </section>
+
   <script>
-    
+    // 댓글 추가
+    function addComment() {
+      const writer = document.getElementById('writer').value
+      const content = document.getElementById('content').value
+
+      // 날짜
+      const today = new Date()  // 현재 날짜/시간 정보 객체 생성
+      console.log(today);
+      const date = today.toISOString().slice(0,10) // 2025-03-19
+      let commentCard = `
+        <div class="comment-card">
+          <div class="title">
+            <div class="item">
+              <div class="avatar">
+                <img src="img/avatar.png" alt="프로필">
+              </div>
+              <div class="writer">${writer}</div>
+            </div>
+            <div class="item">
+              <div class="date">${date}</div>
+            </div>
+          </div>
+          <div class="content-box">
+            <p class="content">
+              ${content}
+            </p>
+          </div>
+        </div>
+      `
+      const commentList = document.getElementById('commentList')
+      const card = document.createElement('div') // <div> 태그 생성
+      card.innerHTML = commentCard               // <div> <div class="comment-card">.. 
+      commentList.appendChild(card)              // commentList 아래에 추가
+
+      document.getElementById('writer').value = ''
+      document.getElementById('content').value = ''
+      
+    }
+
+    // [작성] 버튼 클릭 이벤트
+    const btn = document.getElementById('commentBtn')
+    btn.addEventListener('click', (event) => {
+      addComment()
+    })
+
   </script>
 </body>
 </html>
