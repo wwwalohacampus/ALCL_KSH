@@ -26,6 +26,17 @@ public class Main {
     System.out.println("학생2 - 전공 : " + student2.major);
     System.out.println("학생2 - 학번 : " + student2.stdNo);
     System.out.println();
+
+
+    Student student3 = new Student();
+    System.out.println(student3);
+
+    Student student4 = new Student("김철수", 20);
+    System.out.println(student4);
+
+    Student student5 = new Student("박철수", 30, "20250101", "수학과");
+    System.out.println(student5);
+
   }
   
 }

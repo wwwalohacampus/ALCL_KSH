@@ -13,10 +13,19 @@ public class Student {
 
   // 기본 생성자
   public Student() {
-    name = "이름없음";
-    age = 0;
-    stdNo = "00000000";
-    major = "전공없음";
+    this("이름없음", 0);
+    // this.name = "이름없음";
+    // this.age = 0;
+    // this.stdNo = "0000000";
+    // this.major = "전공없음";
+  }
+
+  public Student(String name, int age) {
+    this( name, age, "0000000", "전공없음" );
+    // this.name = name;
+    // this.age = age;
+    // this.stdNo = "0000000";
+    // this.major = "전공없음";
   }
 
   // 매개변수 있는 생성자
@@ -25,6 +34,11 @@ public class Student {
     this.age = age;
     this.stdNo = stdNo;
     this.major = major;
+  }
+
+  @Override
+  public String toString() {
+    return "Student [name=" + name + ", age=" + age + ", stdNo=" + stdNo + ", major=" + major + "]";
   }
 
   
