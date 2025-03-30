@@ -27,6 +27,7 @@ public class Raichu extends Pikachu {
   public String bAttack() {
     return "볼트체인지";
   }
+  
 
   public String cAttack() {
     return "아이언테일";

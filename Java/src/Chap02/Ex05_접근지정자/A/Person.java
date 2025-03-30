@@ -11,6 +11,7 @@ public class Person {
   // 생성자
   // - 기본 생성자
   public Person() {
+    
   }
   
   // - 모든 매개변수가 있는 생성자
